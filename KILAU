@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KILAU Program Detail</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="KILAU.CSS">
+</head>
+<body>
+
+  <!-- Top Banner -->
+  <div class="marquee-container" aria-hidden="true">
+    <div class="marquee-content">
+      <span>Akshadara Adhiyatra &bull; Official Academic Portal</span>
+      <span>KILAU Assessment Hub &bull; Excellence & Integrity</span>
+      <span>Akshadara Adhiyatra &bull; Official Academic Portal</span>
+      <span>KILAU Assessment Hub &bull; Excellence & Integrity</span>
+    </div>
+  </div>
+
+  <div class="app-layout">
+    <!-- Sidebar Nav -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <img src="img.1.jpeg" alt="Logo" class="sidebar-logo">
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="sidebar-link active">Home</a>
+        <a href="#" class="sidebar-link">Catatan Anda</a>
+        <a href="#" class="sidebar-link">Leaderboard</a>
+        <a href="#" class="sidebar-link">Latihan Soal</a>
+        <a href="#" class="sidebar-link">Rumus</a>
+        <a href="#" class="sidebar-link">Learning Path</a>
+        <a href="#" class="sidebar-link">Informasi Lomba</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-wrapper">
+      <div class="page-wrapper">
+        <header class="program-header">
+          <div class="program-eyebrow">Academic Resource Repository</div>
+          <h1 class="program-title">KILAU</h1>
+          <p class="program-subtitle">
+            Kilas Informasi Akademik Terpadu. Academic resources, structured evaluation rubrics, and semester examination archives across all active grade levels.
+          </p>
+        </header>
+
+        <main>
+          <h2 class="section-title">Assessment &amp; Study Archives</h2>
+
+          <!-- Grade 10 -->
+          <section class="grade-group">
+            <h3 class="grade-header">Grade X (Kelas 10)</h3>
+            <div class="resources-grid">
+              <a href="#" class="btn-pill btn-pill-primary">Semester 1 Midterm (ATS)</a>
+              <a href="#" class="btn-pill btn-pill-primary">Semester 1 Final (AAS)</a>
+              <a href="#" class="btn-pill btn-pill-secondary">Semester 2 Midterm (ATS)</a>
+              <a href="#" class="btn-pill btn-pill-secondary">Semester 2 Final (AAT)</a>
+              <a href="#" class="btn-pill btn-pill-secondary">Curriculum Guide &amp; Rubrics</a>
+            </div>
+          </section>
+
+          <!-- Grade 11 -->
+          <section class="grade-group">
+            <h3 class="grade-header">Grade XI (Kelas 11)</h3>
+            <div class="resources-grid">
+              <a href="#" class="btn-pill btn-pill-primary">Semester 1 Midterm (ATS)</a>
+              <a href="#" class="btn-pill btn-pill-primary">Semester 1 Final (AAS)</a>
+              <a href="#" class="btn-pill btn-pill-secondary">Semester 2 Midterm (ATS)</a>
+              <a href="#" class="btn-pill btn-pill-secondary">Semester 2 Final (AAT)</a>
+              <a href="#" class="btn-pill btn-pill-secondary">Practicum &amp; Lab Guidelines</a>
+            </div>
+          </section>
+
+          <!-- Grade 12 -->
+          <section class="grade-group">
+            <h3 class="grade-header">Grade XII (Kelas 12)</h3>
+            <div class="resources-grid">
+              <a href="#" class="btn-pill btn-pill-primary">Semester 1 Midterm (ATS)</a>
+              <a href="#" class="btn-pill btn-pill-primary">Semester 1 Final (AAS)</a>
+              <a href="#" class="btn-pill btn-pill-primary">School Examination (US)</a>
+              <a href="#" class="btn-pill btn-pill-secondary">College Preparation Modules</a>
+            </div>
+          </section>
+        </main>
+
+        <footer class="site-footer">
+          <p>&copy; Akshadara Adhiyatra. Official School Assessment Portal. All rights reserved.</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Chat Widget -->
+  <div class="ai-chat-widget">
+    <div class="chat-window" id="chatWindow">
+      <div class="chat-header">
+        <div class="chat-title">
+          <span class="online-indicator"></span>
+          <span>KILAU AI Assistant</span>
+        </div>
+        <button class="chat-close-btn" id="closeChatBtn">&times;</button>
+      </div>
+      <div class="chat-body" id="chatBody">
+        <div class="chat-message bot">
+          Halo sobat Kilau! Ada yang bisa saya bantu terkait materi atau soal hari ini?
+        </div>
+      </div>
+      <div class="chat-footer">
+        <input type="text" placeholder="Tanyakan sesuatu..." id="chatInput" />
+        <button id="sendChatBtn">&#10148;</button>
+      </div>
+    </div>
+
+    <button class="chat-toggle-btn" id="toggleChatBtn" aria-label="Buka AI Chat">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+      <span>Tanya AI</span>
+    </button>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleChatBtn');
+    const closeBtn = document.getElementById('closeChatBtn');
+    const chatWindow = document.getElementById('chatWindow');
+
+    toggleBtn.addEventListener('click', () => {
+      chatWindow.classList.toggle('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      chatWindow.classList.remove('active');
+    });
+  </script>
+
+</body>
+</html>
